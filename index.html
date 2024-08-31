@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trident Flights</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/png+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+01123456790" class="helpline-box">
+
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquires :</p>
+
+            <p class="helpline-number">+977-9849964660</p>
+            <p class="emailheader">support@tridentflights.com</p>
+          </div>
+
+        </a>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+
+          <!-- <button class="search-btn" aria-label="Search">
+            <ion-icon name="search"></ion-icon>
+          </button> -->
+
+          <button class="button-70" role="button">Manage Bookings</button>
+          <button class="button-70" role="button">Log In</button>
+          
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>about us</a>
+            </li>
+
+            <li>
+              <a href="#destination" class="navbar-link" data-nav-link>destination</a>
+            </li>
+
+            <li>
+              <a href="#package" class="navbar-link" data-nav-link>packages</a>
+            </li>
+
+            <li>
+              <a href="#gallery" class="navbar-link" data-nav-link>gallery</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav> -->
+
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <!-- <article> -->
+
+      <!-- 
+        - #HERO
+      -->
+
+      <!-- <section class="hero" id="home">
+        <div class="container">
+
+          <h2 class="h1 hero-title">Journey to explore world</h2>
+
+          <p class="hero-text">
+            Ac mi duis mollis. Sapiente? Scelerisque quae, penatibus? Suscipit class corporis nostra rem quos
+            voluptatibus habitant?
+            Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.
+          </p>
+
+          <div class="btn-group">
+            <button class="btn btn-primary">Learn more</button>
+
+            <button class="btn btn-secondary">Book now</button>
+          </div>
+
+        </div>
+      </section> -->
+
+
+<!-- FLIGHT SEARCH -->
+
+      <section class="hero" id="home">
+        <div class="flight-search-wrapper">
+          
+          <!-- Trip Type Buttons -->
+          <div class="trip-type-buttons">
+            <button class="trip-type-button active" data-trip-type="one-way">One Way</button>
+            <button class="trip-type-button" data-trip-type="round-trip">Round Trip</button>
+            <button class="trip-type-button" data-trip-type="multi-city">Multi-City</button>
+          </div>
+          <div class="flight-search-container">
+            <!-- Search Form -->
+            <div class="search-form">
+              <div class="form-row">
+                <!-- Departure -->
+                <div class="form-group">
+                  <label for="departure">From</label>
+                  <input type="text" id="departure" placeholder="Departure City or Airport">
+                  <div id="departure-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+                <div class="swap-icon" onclick="swapFields()">
+                  <img src="assets/images/swap.png" alt="Swap">
+                </div>
+                <!-- Arrival -->
+                <div class="form-group">
+                  <label for="arrival">To</label>
+                  <input type="text" id="arrival" placeholder="Arrival City or Airport"> 
+                  <div id="arrival-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+                <!-- Date Picker -->
+                <div class="form-group">
+                  <label for="departure-date">Departure Date</label>
+                  <input type="date" id="departure-date">
+                </div>
+                <div class="form-group" id="return-date-group">
+                  <label for="return-date">Return Date</label>
+                  <input type="date" id="return-date">
+                </div>
+                <!-- Passenger & Class -->
+                <div class="form-group">
+                  <label>Passengers</label>
+                  <div class="radio-input">
+                    <label>
+                    <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+                    <span>1</span>
+                    </label>
+                    <label>
+                      <input value="value-2" name="value-radio" id="value-2" type="radio">
+                    <span>2</span>
+                    </label>
+                    <label>
+                      <input value="value-3" name="value-radio" id="value-3" type="radio">
+                    <span>3</span>
+                    </label>
+                    <label>
+                      <input value="value-3" name="value-radio" id="value-3" type="radio">
+                    <span>4</span>
+                    </label>
+                    <span class="selection"></span>
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <label for="class-dropdown">Class</label>
+                  <div class="dropdown">
+                    <div class="dropdown__face">
+                      <div class="dropdown__text" id="selected-class">Select Class</div>
+                      <div class="dropdown__arrow"></div>
+                    </div>
+                    <ul class="dropdown__items" id="class-dropdown">
+                      <li data-value="Economy">Economy</li>
+                      <li data-value="Business">Business</li>
+                      <li data-value="First">First</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Search Button -->
+              <button class="search-button">Search Flights</button>
+              <a href="https://uk.trustpilot.com/review/www.alternativeairlines.com?sort=recency" target="_blank" rel="noreferrer" class="ratings" style="color:#fff;font-size:16px;row-gap:5.333333333333333px"><div><span style="margin-right:10px"><strong>Average</strong></span></div><div><img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-3.svg" alt="Trustpilot stars" width="100" height="20" style="margin-right:10px"></div><div><span><strong>500</strong> reviews</span></div><div><span>&nbsp;on&nbsp;</span></div><div><img src="https://n.alternativeairlines.com/images/trustpilot-logo_white.png" alt="Trustpilot logo" width="80" height="20" style="margin-right:10px"></div></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-four">
+        <div class="logo-slider container" >
+            <div class="row" >
+                <div class="col-md-12" >
+                    <div class="client-logos" >
+                        <div class="client_logo_items" >
+                            <img src="assets/images/air-astana.png">
+                            <img src="assets/images/air-china-logo.png">
+                            <img src="assets/images/nepal-airlines-logo.png">
+                            <img src="assets/images/air-india-logo.png">
+                            <img src="assets/images/Air-Mauritius-logo.png">
+                            <img src="assets/images/bristish-airline-logo.png">
+                            <img src="assets/images/cathay-pacific-logo.png">
+                            <img src="assets/images/emirates-logo.png">
+                            <img src="assets/images/japan-airlines-logo.png">
+                            <img src="assets/images/Jetstar-Logo.png">
+                            <img src="assets/images/lufthansa-logo.png">
+                            <img src="assets/images/Qatar-Airways-Logo.png">
+                            <img src="assets/images/singapore-airlines-logo.png">
+                          
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container2">
+      <div class="card2">
+        <span class="small-text">Book Flighs Instantly</span>
+        <span class="title">Download our mobile application.</span>
+        <span class="desc">Download Trident Flights app for IOS &amp; Android to book flights instantly.</span>
+      <div class="buttons">
+        <a href="#" class="button">
+          <span class="icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 28.9958V4.9125C4 4.07667 4.48167 3.34 5.19 3L19.1442 16.9542L5.19 30.9083C4.48167 30.5542 4 29.8317 4 28.9958ZM23.5642 21.3742L8.32083 30.1858L20.3483 18.1583L23.5642 21.3742ZM28.31 15.2683C28.7917 15.6508 29.1458 16.2458 29.1458 16.9542C29.1458 17.6625 28.8342 18.2292 28.3383 18.6258L25.0942 20.4958L21.5525 16.9542L25.0942 13.4125L28.31 15.2683ZM8.32083 3.7225L23.5642 12.5342L20.3483 15.75L8.32083 3.7225Z" fill="white"></path>
+      </svg></span>
+          <div class="button-text google">
+            <span>Get it on</span>
+            <span>Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="button">
+          <span class="icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26.5058 27.625C25.33 29.3817 24.0833 31.0958 22.185 31.1242C20.2866 31.1667 19.6775 30.005 17.5241 30.005C15.3566 30.005 14.6908 31.0958 12.8916 31.1667C11.0358 31.2375 9.6333 29.2967 8.4433 27.5825C6.0208 24.0833 4.16497 17.6375 6.6583 13.3025C7.8908 11.1492 10.1008 9.78916 12.495 9.74666C14.3083 9.71833 16.0366 10.9792 17.1558 10.9792C18.2608 10.9792 20.3575 9.46333 22.5533 9.68999C23.4741 9.73249 26.0525 10.0583 27.71 12.495C27.5825 12.58 24.6358 14.3083 24.6641 17.8925C24.7066 22.1708 28.4183 23.6017 28.4608 23.6158C28.4183 23.715 27.8658 25.6558 26.5058 27.625ZM18.4166 4.95833C19.4508 3.78249 21.165 2.88999 22.5816 2.83333C22.7658 4.49083 22.1 6.16249 21.1083 7.35249C20.1308 8.55666 18.5158 9.49166 16.9291 9.36416C16.7166 7.73499 17.51 6.03499 18.4166 4.95833Z" fill=""></path>
+      </svg></span>
+          <div class="button-text apple">
+            <span>Download from</span>
+            <span>App Store</span>
+          </div>
+        </a>
+      </div>
+      </div>
+    </div>
+
+
+      <!-- 
+        - #POPULAR
+      -->
+
+      <section class="popular" id="destination">
+        <div class="container">
+          
+
+          <p class="section-subtitle">Uncover place</p>
+
+          <h2 class="h2 section-title">Popular destination</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="popular-list">
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Nepal</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Annapurna Trek</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Dubai</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Burj khalifa</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">India</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Taj Mahal</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <button class="btn btn-primary">More destintion</button>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PACKAGE
+      -->
+
+      <section class="package" id="package">
+        <div class="container">
+
+          <p class="section-subtitle">Popular Packeges</p>
+
+          <h2 class="h2 section-title">Checkout Our Packeges</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="package-list">
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Experience The Great Holiday On Beach</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/6N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">pax: 10</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Malaysia</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(25 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    $750
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Summer Holiday To The Oxolotan River</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/6N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">pax: 10</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Malaysia</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(20 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    $520
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Santorini Island's Weekend Vacation</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/6N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">pax: 10</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Malaysia</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(40 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    $660
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+  
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #GALLERY
+      -->
+
+      <!-- <section class="gallery" id="gallery">
+        <div class="container">
+
+          <p class="section-subtitle">Photo Gallery</p>
+
+          <h2 class="h2 section-title">Photo's From Travellers</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="gallery-list">
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-1.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-2.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-3.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-4.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-5.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <!-- <section class="cta" id="contact">
+        <div class="container">
+
+          <div class="cta-content">
+            <p class="section-subtitle">Call To Action</p>
+
+            <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
+
+            <p class="section-text">
+              Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
+              laudantium. Sit ornare
+              mollitia tenetur, aptent.
+            </p>
+          </div>
+
+          <button class="btn btn-secondary">Contact Us !</button>
+
+        </div>
+      </section>
+
+    </article> -->
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container3">
+
+        <div class="footer-brand">
+
+          <a href="#" class="contact-item">
+            <img src="./assets/images/logo.svg" alt="Tourly logo">
+          </a>
+           <p class="contact-item">
+            <b>Trident Flights</b>is globally trusted air ticketing service provider registered under Nepal Government.
+          </p>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+
+            <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 90</a>
+          </li>
+
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+
+            <a href="mailto:info.tourly.com" class="contact-link">support@tridentflights.com</a>
+          </li>
+
+          <li class="contact-item">
+            <ion-icon name="location-outline"></ion-icon>
+
+            <address>Kathmandu, Nepal</address>
+          </li>
+         
+          <ul>
+                    <div id="paypal-button-container"></div>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+          <script>
+            paypal.Buttons({
+                style: {
+                  layout: 'vertical',
+              color: 'blue',
+              shape: 'rect',
+              label: 'paypal'
+                    
+                },
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '1'
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    });
+                }
+            }).render('#paypal-button-container');
+          </script>
+
+
+
+          </ul>
+        </div>
+          
+
+        </div>
+
+
+
+      </div>
+    </div>
+    
+
+    <footer class="footer-bottom">
+      <div class="footer-bottom-list">
+        <div class="payment-partners">
+          <a href="https://www.adbl.gov.np" target="_blank">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1551981637-893321.png" alt="Agricultural Development Bank logo" title="Agricultural Development Bank">
+          </a>          
+          <a href="http://www.rbb.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1550118692-202567.jpg" alt="Rastriya Banijya Bank" title="Rastriya Banijya Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.nepalbank.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1555483070-645778.png" alt="Nepal Bank" title="Nepal Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://globalimebank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775042-153473.png" alt="Global IME Bank" title="Global IME Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.siddharthabank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1550999403-978908.png" alt="Siddhartha Bank" title="Siddhartha Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.nabilbank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775263-656997.png" alt="Nabil Bank" title="Nabil Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.nicasiabank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775082-388179.png" alt="NIC Asia Bank" title="NIC Asia Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.nibl.com.np/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1674207980-138932789.png" alt="Nepal Investment Mega Bank" title="Nepal Investment Mega Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.sanimabank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548776229-516999.png" alt="Sanima Bank" title="Sanima Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.laxmibank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775250-634029.png" alt="Laxmi Sunrise Bank" title="Laxmi Sunrise Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.machbank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775226-407179.png" alt="Machhapuchchhre Bank" title="Machhapuchchhre Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://nmbbanknepal.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775166-498675.png" alt="NMB Bank" title="NMB Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://www.civilbank.com.np/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775094-957381.png" alt="Civil Bank" title="Civil Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://prabhubank.com/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775066-514057.png" alt="Prabhu Bank" title="Prabhu Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.garimabank.com.np/" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548775004-888216.png" alt="Garima Bikash Bank Limited" title="Garima Bikash Bank Limited" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.facebook.com/PurnimaBank" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548774972-721243.png" alt="Purnima Bikas Bank" title="Purnima Bikas Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://www.primebank.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548774957-328699.png" alt="Prime Bank" title="Prime Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://nawakantipur.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548774875-974400.png" alt="Nawakantipur" title="Nawakantipur" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://muktinathbank.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1548774856-591622.png" alt="Muktinath Bikas Bank" title="Muktinath Bikas Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.kumaribank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1550646989-571816.png" alt="Kumari Bank" title="Kumari Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.everestbankltd.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1552900927-132994.png" alt="Everest Bank" title="Everest Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://nsbl.statebank/home" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1555480811-469647.png" alt="Nepal SBI Bank" title="Nepal SBI Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.ctznbank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1563267477-300646.png" alt="Citizens Bank" title="Citizens Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.sc.com/np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1625385858-118532.png" alt="Standard Chartered Bank" title="Standard Chartered Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://www.mahalaxmibank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1563268113-166343.png" alt="Mahalaxmi Bikas Bank" title="Mahalaxmi Bikas Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://jbbl.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1555484570-909343.png" alt="Jyoti Bikash Bank" title="Jyoti Bikash Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.shangrilabank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1563267036-871003.png" alt="Shangri-la Development Bank" title="Shangri-la Development Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.srdb.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1563268845-683407.png" alt="Shine Resunga Development Bank" title="Shine Resunga Development Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://www.kamanasewabank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1563269283-430350.png" alt="Kamana Sewa Bikas Bank" title="Kamana Sewa Bikas Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="http://www.himalayanbank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1581340780-266003.png" alt="Himalayan Bank" title="Himalayan Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.lumbinibikasbank.com" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1665740479-1213937546.png" alt="Lumbini Bikas Bank" title="Lumbini Bikas Bank" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://goodwillfinance.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1667808008-1433196096.jpeg" alt="Goodwill Finance" title="Goodwill Finance" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.pfltd.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1680516386-441433811.jpg" alt="Progressive Finance" title="Progressive Finance" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://centralfinance.com.np" target="_blank" >
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1683552401-173693043.png" alt="Central Finance limited" title="Central Finance limited" style="height: 50px;">
+        </a>
+                                                                                                    <a href="#" target="_blank">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1551891424-439533.png" alt="VISA CARD" title="VISA CARD" style="height: 50px;">
+        </a>
+                                                                                                    <a href="#" target="_blank">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1551891477-395665.png" alt="Mastercard" title="Mastercard" style="height: 50px;">
+        </a>
+                                                                                                    <a href="#" target="_blank">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1551891500-576453.png" alt="Union Pay" title="Union Pay" style="height: 50px;">
+        </a>
+                                                                                                    <a href="https://www.connectips.com/" target="_blank"  bis_size="{&quot;x&quot;:1121,&quot;y&quot;:3352,&quot;w&quot;:206,&quot;h&quot;:50,&quot;abs_x&quot;:1121,&quot;abs_y&quot;:3352}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1578919213-489059.png" alt="ConnectIPS" title="ConnectIPS" style="height: 50px;" bis_size="{&quot;x&quot;:1121,&quot;y&quot;:3352,&quot;w&quot;:206,&quot;h&quot;:50,&quot;abs_x&quot;:1121,&quot;abs_y&quot;:3352}" bis_id="bn_aynatsh463spm955ahlq4a">
+        </a>
+                                                                                                    <a href="https://www.namastepay.com/" target="_blank"  bis_size="{&quot;x&quot;:1352,&quot;y&quot;:3352,&quot;w&quot;:131,&quot;h&quot;:50,&quot;abs_x&quot;:1352,&quot;abs_y&quot;:3352}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1639578826-180942441.png" alt="Namaste Pay" title="Namaste Pay" style="height: 50px;" bis_size="{&quot;x&quot;:1352,&quot;y&quot;:3352,&quot;w&quot;:131,&quot;h&quot;:50,&quot;abs_x&quot;:1352,&quot;abs_y&quot;:3352}" bis_id="bn_s5buor3km4iwuo0l5c3m8y">
+        </a>
+                                                                                                    <a href="https://www.fonepay.com" target="_blank"  bis_size="{&quot;x&quot;:1508,&quot;y&quot;:3352,&quot;w&quot;:172,&quot;h&quot;:50,&quot;abs_x&quot;:1508,&quot;abs_y&quot;:3352}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1625752884-979451.png" alt="fonePay" title="fonePay" style="height: 50px;" bis_size="{&quot;x&quot;:1508,&quot;y&quot;:3352,&quot;w&quot;:172,&quot;h&quot;:50,&quot;abs_x&quot;:1508,&quot;abs_y&quot;:3352}" bis_id="bn_dfw4km81km2jixjagj4lly">
+        </a>
+                                                                                                    <a href="https://esewa.com.np" target="_blank"  bis_size="{&quot;x&quot;:1705,&quot;y&quot;:3352,&quot;w&quot;:147,&quot;h&quot;:50,&quot;abs_x&quot;:1705,&quot;abs_y&quot;:3352}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1551196022-680204.jpg" alt="eSewa" title="eSewa" style="height: 50px;" bis_size="{&quot;x&quot;:1705,&quot;y&quot;:3352,&quot;w&quot;:147,&quot;h&quot;:50,&quot;abs_x&quot;:1705,&quot;abs_y&quot;:3352}" bis_id="bn_rlyt4vfxke9q1tbjeu9tkb">
+        </a>
+                                                                                                    <a href="https://khalti.com/" target="_blank"  bis_size="{&quot;x&quot;:749,&quot;y&quot;:3422,&quot;w&quot;:131,&quot;h&quot;:50,&quot;abs_x&quot;:749,&quot;abs_y&quot;:3422}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1577511654-665838.png" alt="Khalti" title="Khalti" style="height: 50px;" bis_size="{&quot;x&quot;:749,&quot;y&quot;:3422,&quot;w&quot;:131,&quot;h&quot;:50,&quot;abs_x&quot;:749,&quot;abs_y&quot;:3422}" bis_id="bn_fkvey577eft4exoofg2i9t">
+        </a>
+                                                                                                    <a href="http://www.imepay.com.np" target="_blank"  bis_size="{&quot;x&quot;:905,&quot;y&quot;:3422,&quot;w&quot;:132,&quot;h&quot;:50,&quot;abs_x&quot;:905,&quot;abs_y&quot;:3422}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1577548418-490820.png" alt="IMEPay" title="IMEPay" style="height: 50px;" bis_size="{&quot;x&quot;:905,&quot;y&quot;:3422,&quot;w&quot;:132,&quot;h&quot;:50,&quot;abs_x&quot;:905,&quot;abs_y&quot;:3422}" bis_id="bn_pmr8cn067r0p0dfp10ubah">
+        </a>
+                                                                                                    <a href="https://prabhupay.com/" target="_blank"  bis_size="{&quot;x&quot;:1061,&quot;y&quot;:3422,&quot;w&quot;:103,&quot;h&quot;:50,&quot;abs_x&quot;:1061,&quot;abs_y&quot;:3422}">
+            <img src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/payment-partners/1687324818-634668474.jpg" alt="Prabhu Pay" title="Prabhu Pay" style="height: 50px;" bis_size="{&quot;x&quot;:1061,&quot;y&quot;:3422,&quot;w&quot;:103,&quot;h&quot;:50,&quot;abs_x&quot;:1061,&quot;abs_y&quot;:3422}" bis_id="bn_q9fgvx4akozqwu6q3p99c2">
+        </a>
+          <!-- Repeat for other payment partners -->
+        </div>
+    
+
+      </div>
+    </footer>
+
+    <footer>    <footer>
+          
+      <ul class="footer-bottom-list2">
+
+      </ul>
+    </footer>
+
+    <footer>
+          
+      <ul class="footer-bottom-list2">
+
+        <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+        <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
+        <li><a href="#" class="footer-bottom-link">FAQ</a></li>
+      </ul>
+    </footer>
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+
