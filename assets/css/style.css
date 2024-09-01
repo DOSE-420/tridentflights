@@ -1551,6 +1551,8 @@ address {
 
 /* General Styling */
 .flight-search-wrapper {
+  display: block; /* Ensure it is not set to 'none' */
+
   max-width: 1800px; /* Maximum width of the container */
   width: 100%;
   margin: 0 auto;
@@ -1564,6 +1566,8 @@ address {
 
 /* Container for the search form and buttons */
 .flight-search-container {
+  width: 100%;   /* Ensure wrapper is full width */
+
   background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent container background */
   padding: 20px;
   height: 150px;
