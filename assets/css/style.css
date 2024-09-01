@@ -1837,6 +1837,25 @@ address {
   transform: translateX(calc(var(--container_width) * 3/4));
 }
 
+/* General styles for the input field */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in width */
+  font-size: 16px; /* Ensure readable text size */
+  margin-bottom: 15px; /* Margin for spacing */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  input[type="text"] {
+    padding: 12px; /* Adjust padding for mobile */
+    font-size: 18px; /* Slightly larger font size for mobile */
+  }
+}
+
 .passenger-button,
 .class-button {
   padding: 10px;
