@@ -335,7 +335,7 @@ body { background-color: rgb(255, 251, 245); }
   z-index: 3;
 }
 
-/* .navbar.active {
+.navbar.active {
   right: 0;
   visibility: visible;
   pointer-events: all;
@@ -371,7 +371,7 @@ body { background-color: rgb(255, 251, 245); }
   text-transform: capitalize;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--bright-navy-blue); } */
+.navbar-link:is(:hover, :focus) { color: var(--bright-navy-blue); }
 
 .overlay {
   position: fixed;
@@ -1551,8 +1551,6 @@ address {
 
 /* General Styling */
 .flight-search-wrapper {
-  display: block; /* Ensure it is not set to 'none' */
-
   max-width: 1800px; /* Maximum width of the container */
   width: 100%;
   margin: 0 auto;
@@ -1566,59 +1564,15 @@ address {
 
 /* Container for the search form and buttons */
 .flight-search-container {
-  width: 100%;   /* Ensure wrapper is full width */
-  height: auto; /* Adjust height for mobile responsiveness */
   background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent container background */
   padding: 20px;
-  height: 150px;
   border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-  .container { max-width: 800px; }
-}
-
-/* Trip Type Buttons */
-.trip-type-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 0; /* Remove gap between buttons */
-}
-
-.trip-type-button {
-  background-color: #acacac;
-  border: none;
-  border-radius: 5px; /* Apply radius to all corners */
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0; /* Remove margin to make buttons touch */
-}
-
-.trip-type-button:not(:last-child) {
-  border-radius: 5px 0 0 5px; /* Apply radius to left corners for all but the last button */
-}
-
-.trip-type-button:not(:first-child) {
-  border-radius: 0; /* Remove radius on the left side of buttons except the first */
-}
-
-.trip-type-button.active,
-.trip-type-button:hover {
-  background-image: linear-gradient(#0078bd, #5a54e1);
-  color: white;
-  transform: scale(1.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for active state */
-}
-
-.trip-type-button:last-child {
-  border-radius: 0 5px 5px 0; /* Apply radius to right corners for the last button */
+  margin-bottom: 30px; /* Space below the flight search container */
 }
 
 /* Form Styling */
@@ -1661,25 +1615,6 @@ address {
   display: none;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .flight-search-wrapper {
-    max-width: 100%; /* Full width on mobile */
-    padding: 15px;
-  }
-
-  .trip-type-buttons {
-    flex-direction: column;
-  }
-
-  .trip-type-button {
-    margin-bottom: 10px;
-  }
-
-  .form-group {
-    margin-bottom: 10px;
-  }
-}
 /* Swap Icon */
 .swap-icon {
   display: flex;
@@ -1764,10 +1699,8 @@ address {
 .class-buttons {
   display: flex;
   margin-bottom: 10px;
-
   justify-content: space-between; /* Distribute space between items */
-
- column-gap: 2px;
+  column-gap: 2px;
 }
 
 .radio-input input {
@@ -1778,18 +1711,21 @@ address {
   --container_width: 300px;
   position: relative;
   display: flex;
-  margin-left: 50px;
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   border-radius: 9999px;
   background-color: #fff;
   color: #000000;
   width: var(--container_width);
   overflow: hidden;
   border: 1px solid rgba(53, 52, 52, 0.226);
+  margin: 0 auto; /* Center the container horizontally */
+  height: auto; /* Allow height to adjust based on content */
 }
 
+/* Radio input labels */
 .radio-input label {
-  width: 100%;
+  flex: 1; /* Ensure labels take up equal space */
   padding: 10px;
   cursor: pointer;
   display: flex;
@@ -1799,8 +1735,10 @@ address {
   font-weight: 600;
   letter-spacing: -1px;
   font-size: 14px;
+  height: 50px; /* Ensure labels have enough height */
 }
 
+/* Selection styling */
 .selection {
   display: none;
   position: absolute;
@@ -1837,25 +1775,6 @@ address {
   transform: translateX(calc(var(--container_width) * 3/4));
 }
 
-/* General styles for the input field */
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box; /* Include padding and border in width */
-  font-size: 16px; /* Ensure readable text size */
-  margin-bottom: 15px; /* Margin for spacing */
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  input[type="text"] {
-    padding: 12px; /* Adjust padding for mobile */
-    font-size: 18px; /* Slightly larger font size for mobile */
-  }
-}
-
 .passenger-button,
 .class-button {
   padding: 10px;
@@ -1880,7 +1799,7 @@ input[type="text"] {
 
 .autocomplete-suggestions {
   border: 1px solid #ccc;
-  max-width: 20%; /* Matches the width of the input */
+  max-width: 100%; /* Adjust to fit input width on mobile */
   border-radius: 20px;
   max-height: 200px;
   overflow-y: auto;
@@ -1903,9 +1822,8 @@ input[type="text"] {
 /* Search Button */
 .search-button {
   background-image: linear-gradient(#0078bd, #5a54e1);
-
   border: none;
-  margin-top: 50px;
+  margin-top: 20px; /* Reduced space to fit better on mobile */
   border-radius: 10px;
   padding: 12px 24px;
   color: #fff;
@@ -1913,22 +1831,6 @@ input[type="text"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center;
-}
-
-.Plaques_plaque__5yNHH {
-  color: #fff;
-  align-self: center;
-margin-top: 20px;
-  width: 105px;
-  position: cen;
-  background-color: #7a6de2;
-  font-size: 12px;
-  padding: 5px 6px;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 1;
-  display: flex;
-  align-items: center;
 }
 
 .search-button:hover {
@@ -1979,7 +1881,28 @@ margin-top: 20px;
   .trip-type-button {
     margin: 5px 0; /* Adjust margin for vertical layout */
   }
+
+  .search-button {
+    width: 100%; /* Full width button on small screens */
+  }
 }
+
+@media (max-width: 480px) {
+  .flight-search-container {
+    padding: 10px; /* Reduce padding for very small screens */
+  }
+
+  .form-group input {
+    padding: 8px; /* Reduce padding inside input fields */
+  }
+
+  .search-button {
+    font-size: 14px; /* Smaller font size for small screens */
+    padding: 10px 20px; /* Adjust padding */
+  }
+}
+
+
 
 
   
@@ -2065,5 +1988,6 @@ margin-top: 20px;
   .container { max-width: 1180px; }
 
 }
+
 
 
