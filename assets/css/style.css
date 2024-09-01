@@ -1663,7 +1663,7 @@ address {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .flight-search-container {
+  .flight-search-wrapper {
     max-width: 100%; /* Full width on mobile */
     padding: 15px;
   }
