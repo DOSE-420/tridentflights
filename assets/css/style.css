@@ -335,7 +335,7 @@ body { background-color: rgb(255, 251, 245); }
   z-index: 3;
 }
 
-.navbar.active {
+/* .navbar.active {
   right: 0;
   visibility: visible;
   pointer-events: all;
@@ -371,7 +371,7 @@ body { background-color: rgb(255, 251, 245); }
   text-transform: capitalize;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--bright-navy-blue); }
+.navbar-link:is(:hover, :focus) { color: var(--bright-navy-blue); } */
 
 .overlay {
   position: fixed;
