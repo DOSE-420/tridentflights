@@ -189,90 +189,90 @@
 
 
 <!-- FLIGHT SEARCH -->
-<section class="hero" id="home">
-  <div class="flight-search-wrapper">
-      <!-- Trip Type Buttons -->
-      <div class="trip-type-buttons">
-          <button class="trip-type-button active" data-trip-type="one-way">One Way</button>
-          <button class="trip-type-button" data-trip-type="round-trip">Round Trip</button>
-          <button class="trip-type-button" data-trip-type="multi-city">Multi-City</button>
-      </div>
-      <div class="flight-search-container">
-          <!-- Search Form -->
-          <div class="search-form">
+
+      <section class="hero" id="home">
+        <div class="flight-search-wrapper">
+          
+          <!-- Trip Type Buttons -->
+          <div class="trip-type-buttons">
+            <button class="trip-type-button active" data-trip-type="one-way">One Way</button>
+            <button class="trip-type-button" data-trip-type="round-trip">Round Trip</button>
+            <button class="trip-type-button" data-trip-type="multi-city">Multi-City</button>
+          </div>
+          <div class="flight-search-container">
+            <!-- Search Form -->
+            <div class="search-form">
               <div class="form-row">
-                  <!-- Departure -->
-                  <div class="form-group">
-                      <label for="departure">From</label>
-                      <input type="text" id="departure" placeholder="Departure City or Airport">
-                      <div id="departure-suggestions" class="autocomplete-suggestions"></div>
+                <!-- Departure -->
+                <div class="form-group">
+                  <label for="departure">From</label>
+                  <input type="text" id="departure" placeholder="Departure City or Airport">
+                  <div id="departure-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+                <!-- <div class="swap-icon" onclick="swapFields()">
+                  <img src="assets/images/swap.png" alt="Swap">
+                </div> -->
+                <!-- Arrival -->
+                <div class="form-group">
+                  <label for="arrival">To</label>
+                  <input type="text" id="arrival" placeholder="Arrival City or Airport"> 
+                  <div id="arrival-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+                <!-- Date Picker -->
+                <div class="form-group">
+                  <label for="departure-date">Departure Date</label>
+                  <input type="date" id="departure-date">
+                </div>
+                <div class="form-group" id="return-date-group">
+                  <label for="return-date">Return Date</label>
+                  <input type="date" id="return-date">
+                </div>
+                <!-- Passenger & Class -->
+                <div class="form-group">
+                  <label>Passengers</label>
+                  <div class="radio-input">
+                    <label>
+                    <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+                    <span>1</span>
+                    </label>
+                    <label>
+                      <input value="value-2" name="value-radio" id="value-2" type="radio">
+                    <span>2</span>
+                    </label>
+                    <label>
+                      <input value="value-3" name="value-radio" id="value-3" type="radio">
+                    <span>3</span>
+                    </label>
+                    <label>
+                      <input value="value-3" name="value-radio" id="value-3" type="radio">
+                    <span>4</span>
+                    </label>
+                    <span class="selection"></span>
                   </div>
-                  <!-- Arrival -->
-                  <div class="form-group">
-                      <label for="arrival">To</label>
-                      <input type="text" id="arrival" placeholder="Arrival City or Airport">
-                      <div id="arrival-suggestions" class="autocomplete-suggestions"></div>
+
+                </div>
+                <div class="form-group">
+                  <label for="class-dropdown">Class</label>
+                  <div class="dropdown">
+                    <div class="dropdown__face">
+                      <div class="dropdown__text" id="selected-class">Select Class</div>
+                      <div class="dropdown__arrow"></div>
+                    </div>
+                    <ul class="dropdown__items" id="class-dropdown">
+                      <li data-value="Economy">Economy</li>
+                      <li data-value="Business">Business</li>
+                      <li data-value="First">First</li>
+                    </ul>
                   </div>
-                  <!-- Date Picker -->
-                  <div class="form-group">
-                      <label for="departure-date">Departure Date</label>
-                      <input type="date" id="departure-date">
-                  </div>
-                  <div class="form-group" id="return-date-group">
-                      <label for="return-date">Return Date</label>
-                      <input type="date" id="return-date">
-                  </div>
-                  <!-- Passenger & Class -->
-                  <div class="form-group">
-                      <label>Passengers</label>
-                      <div class="radio-input">
-                          <label>
-                              <input type="radio" name="value-radio" id="value-1" value="1" checked>
-                              <span>1</span>
-                          </label>
-                          <label>
-                              <input type="radio" name="value-radio" id="value-2" value="2">
-                              <span>2</span>
-                          </label>
-                          <label>
-                              <input type="radio" name="value-radio" id="value-3" value="3">
-                              <span>3</span>
-                          </label>
-                          <label>
-                              <input type="radio" name="value-radio" id="value-4" value="4">
-                              <span>4</span>
-                          </label>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="class-dropdown">Class</label>
-                      <div class="dropdown">
-                          <div class="dropdown__face">
-                              <div class="dropdown__text" id="selected-class">Select Class</div>
-                              <div class="dropdown__arrow"></div>
-                          </div>
-                          <ul class="dropdown__items" id="class-dropdown">
-                              <li data-value="Economy">Economy</li>
-                              <li data-value="Business">Business</li>
-                              <li data-value="First">First</li>
-                          </ul>
-                      </div>
-                  </div>
+                </div>
               </div>
               <!-- Search Button -->
               <button class="search-button">Search Flights</button>
-              <a href="https://uk.trustpilot.com/review/www.alternativeairlines.com?sort=recency" target="_blank" rel="noreferrer" class="ratings">
-                  <div><span><strong>Average</strong></span></div>
-                  <div><img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-3.svg" alt="Trustpilot stars" width="100" height="20"></div>
-                  <div><span><strong>500</strong> reviews</span></div>
-                  <div><span>&nbsp;on&nbsp;</span></div>
-                  <div><img src="https://n.alternativeairlines.com/images/trustpilot-logo_white.png" alt="Trustpilot logo" width="80" height="20"></div>
-              </a>
+              <a href="https://uk.trustpilot.com/review/www.alternativeairlines.com?sort=recency" target="_blank" rel="noreferrer" class="ratings" style="color:#fff;font-size:16px;row-gap:5.333333333333333px"><div><span style="margin-right:10px"><strong>Average</strong></span></div><div><img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-3.svg" alt="Trustpilot stars" width="100" height="20" style="margin-right:10px"></div><div><span><strong>500</strong> reviews</span></div><div><span>&nbsp;on&nbsp;</span></div><div><img src="https://n.alternativeairlines.com/images/trustpilot-logo_white.png" alt="Trustpilot logo" width="80" height="20" style="margin-right:10px"></div></a>
+            </div>
           </div>
-      </div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       <section class="section-four">
         <div class="logo-slider container" >
