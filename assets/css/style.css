@@ -1567,7 +1567,7 @@ address {
 /* Container for the search form and buttons */
 .flight-search-container {
   width: 100%;   /* Ensure wrapper is full width */
-
+  height: auto; /* Adjust height for mobile responsiveness */
   background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent container background */
   padding: 20px;
   height: 150px;
