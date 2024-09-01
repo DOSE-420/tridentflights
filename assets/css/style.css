@@ -1661,6 +1661,25 @@ address {
   display: none;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .flight-search-container {
+    max-width: 100%; /* Full width on mobile */
+    padding: 15px;
+  }
+
+  .trip-type-buttons {
+    flex-direction: column;
+  }
+
+  .trip-type-button {
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+}
 /* Swap Icon */
 .swap-icon {
   display: flex;
